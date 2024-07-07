@@ -14,8 +14,7 @@
     --white: #fff;
     --dairy: #fcfcfc;
 
-    --anim-fast: 300ms ease-in-out;
-    --anim-slow: 600ms ease-in-out;
+    --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 ul,
@@ -69,6 +68,7 @@ a:hover {
 /*===================header===================*/
 header {
     border-bottom: 1px solid var(--cornflower);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-studio {
@@ -99,7 +99,7 @@ header {
     position: relative;
     padding: 24px 0;
     color: var(--navy-blue);
-    transition: var(--anim-fast);
+    transition: var(--animation);
     transition-property: color, opacity, transform;
 }
 
@@ -138,7 +138,7 @@ header {
     display: block;
     padding: 24px 0;
 
-    transition: var(--anim-fast);
+    transition: var(--animation);
     transition-property: color, opacity, transform;
 }
 
@@ -158,16 +158,13 @@ header {
 
 /*===================hero===================*/
 .hero .container {
+    max-width: 1440px;
     padding: 188px 0;
     background: var(--grey);
-    background-image: linear-gradient(
-            var(--grey),
-            var(--grey)
-    ),
-    url('../images/hero/hero-bg.jpg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/hero-bg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
 }
 
 .hero-title {
@@ -193,7 +190,9 @@ header {
     letter-spacing: 0.04em;
     line-height: 1.5;
     cursor: pointer;
-    background: var(--iris);
+    background-color: var(--iris);
+    transition: var(--animation);
+    transition-property: background-color;
     color: var(--white);
 }
 
@@ -230,12 +229,14 @@ header {
 
 .benefits-wrapper {
     display: flex;
+    height: 112px;
     justify-content: center;
     align-items: center;
     background: var(--cloud);
     border: 1px solid var(--light-slate);
     border-radius: 4px;
     padding: 24px 0;
+    margin-bottom: 8px;
 }
 
 .benefits-title {
@@ -279,6 +280,7 @@ header {
     background-color: var(--brand-color);
     width: calc((100% - 72px) / 4);
     border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .employee {
@@ -290,6 +292,10 @@ header {
 
 .employee .socials {
     gap: 24px;
+}
+
+.employee .socials-link:hover, :focus {
+    background-color: var(--ocean);
 }
 
 .team-card .team-card-title {
@@ -348,7 +354,7 @@ header {
     top: 0;
     left: 0;
     transform: translateY(100%);
-    transition: var(--anim-slow);
+    transition: var(--animation);
     transition-property: transform;
     padding: 40px 32px;
     width: 100%;
@@ -360,14 +366,14 @@ header {
     background-color: var(--iris);
 }
 
-.portfolio-card-item:hover .overlay {
+.portfolio-card-item:hover .overlay, .overlay:hover {
     transform: translateY(0);
 }
 
 .portfolio-card-item:hover {
     cursor: pointer;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    transition: var(--anim-fast);
+    transition: var(--animation);
     transition-property: box-shadow;
 }
 
@@ -402,8 +408,11 @@ header {
 }
 
 .footer .container {
-    display: inline-flex;
-    gap: 120px;
+    display: flex;
+    align-items: baseline;
+}
+.footer-info{
+    margin-right: 120px;
 }
 
 footer .logo {
@@ -436,6 +445,7 @@ footer .logo > span {
 .socials {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
 }
 
@@ -448,7 +458,7 @@ footer .logo > span {
     background-color: var(--iris);
     border-radius: 50%;
 
-    transition: var(--anim-fast);
+    transition: var(--animation);
     transition-property: background-color;
 }
 
