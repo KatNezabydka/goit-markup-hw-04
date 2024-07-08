@@ -100,13 +100,13 @@ header {
     padding: 24px 0;
     color: var(--navy-blue);
     transition: var(--animation);
-    transition-property: color, opacity, transform;
+    transition-property: color;
 }
 
 .nav-link.active {
     color: var(--ocean);
     transition: var(--animation);
-    transition-property: color, opacity, transform;
+    transition-property: color;
 }
 
 .nav-link.active::after {
@@ -141,11 +141,13 @@ header {
     padding: 24px 0;
 
     transition: var(--animation);
-    transition-property: color, opacity, transform;
+    transition-property: color;
 }
 
 .nav-link:focus, .nav-link:hover, .nav-link:active, .address-info:focus, .address-info:hover, .address-info:active {
     color: var(--ocean);
+    transition: var(--animation);
+    transition-property: color;
 }
 
 .address {
@@ -156,8 +158,6 @@ header {
 .address-list {
     display: flex;
     gap: 40px;
-    transition: var(--animation);
-    transition-property: color, opacity, transform;
 }
 
 /*===================hero===================*/
