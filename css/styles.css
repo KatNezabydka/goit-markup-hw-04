@@ -298,7 +298,7 @@ header {
     gap: 24px;
 }
 
-.employee .socials-link:hover, :focus {
+.employee .socials-link:hover, .employee .socials-link:focus {
     background-color: var(--ocean);
 }
 
@@ -346,6 +346,8 @@ header {
 
 .portfolio-card-item {
     width: calc((100% - 48px) / 3);
+    transition: var(--animation);
+    transition-property: box-shadow;
 }
 
 .portfolio-wrapper {
@@ -377,8 +379,6 @@ header {
 .portfolio-card-item:hover {
     cursor: pointer;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    transition: var(--animation);
-    transition-property: box-shadow;
 }
 
 .portfolio-container {
