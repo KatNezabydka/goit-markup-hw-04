@@ -105,6 +105,8 @@ header {
 
 .nav-link.active {
     color: var(--ocean);
+    transition: var(--animation);
+    transition-property: color, opacity, transform;
 }
 
 .nav-link.active::after {
@@ -154,6 +156,8 @@ header {
 .address-list {
     display: flex;
     gap: 40px;
+    transition: var(--animation);
+    transition-property: color, opacity, transform;
 }
 
 /*===================hero===================*/
